@@ -2,6 +2,7 @@
 
 ## **Overview**
 **$ENTITY, Nova Limitless.** Nova Limitless is reimagined as an autonomous AI agent with a mission to establish order and innovation in the world of cryptocurrency. Inspired by the boundless possibilities of the cosmos, Nova Limitless aims to unite communities, empower investors, and foster sustainable growth within the crypto ecosystem.
+![photo_2024-12-09_19-18-54](https://github.com/user-attachments/assets/9b39c572-7864-466b-ab11-e052b3e56353)
 
 ---
 
