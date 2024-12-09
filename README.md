@@ -34,26 +34,34 @@ The AI dynamically combines adjectives, locations, and descriptive details to cr
 ### **1. Clone the Repository**
 ```bash
 git clone https://github.com/5thdimension1/Eliza-Nova-SDK.git
-cd Eliza-Nova-SDK
+cd Eliza-Nova-SDK  
+```
+### **2.  Install Dependencies**
 
-2. Install Dependencies
+```bash
 npm init -y
 npm install typescript @types/node --save-dev
 npm install twit
 npm install dotenv
+```
+### **3. Configure Twitter API**
 
-3. Configure Twitter API
+```bash
 CONSUMER_KEY=your_consumer_key
 CONSUMER_SECRET=your_consumer_secret
 ACCESS_TOKEN=your_access_token
 ACCESS_SECRET=your_access_secret
+```
+### **4. Create a novaai.tsx file with the following content:**
 
-Create a novaai.ts file with the following content:
 
+
+```bash
 import * as fs from 'fs';
 import * as path from 'path';
 import * as Twit from 'twit';
 import { config } from 'dotenv';
+import { AutonomousAI } from 'ai16z'; // Assuming ai16z provides TypeScript support
 
 // Load environment variables
 config();
@@ -139,12 +147,14 @@ async function generateAndPost(): Promise<void> {
 }
 
 generateAndPost();
+```
+### **5. Run the script**
 
 
-Run the TypeScript Script : 
+```bash
 npx tsc novaai.ts
 node novaai.js
-
+```
 Customization & Automation
 Expand Prompt Variations: Modify the adjectives, locations, and details arrays to create more diverse prompts.
 Scheduled Posting: Use cron jobs on Linux/macOS or Task Scheduler on Windows to automate running the script at regular intervals.
