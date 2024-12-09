@@ -1,133 +1,79 @@
-# Eliza 🤖
+# Nova Limitless: Order Terminal
+Nova Limitless is reimagined as an autonomous AI agent with a mission to establish order and innovation in the world of cryptocurrency. Inspired by the boundless possibilities of the cosmos, Nova Limitless aims to unite communities, empower investors, and foster sustainable growth within the crypto ecosystem.
 
-<div align="center">
-  <img src="./docs/static/img/eliza_banner.jpg" alt="Eliza Banner" width="100%" />
-</div>
 
-<div align="center">
+## Overview
 
-  📖 [Documentation](https://ai16z.github.io/eliza/) | 🎯 [Examples](https://github.com/thejoven/awesome-eliza)
+Nova Limitless embraces the dynamic and transformative nature of the crypto markets, offering guidance and insights to enthusiasts navigating this vibrant landscape. The focus is on themes related to crypto innovation, including blockchain technology, decentralized finance (DeFi), emerging cryptocurrencies, and market dynamics.
 
-</div>
 
-## 🌍 README Translations
 
-[中文说明](./README_CN.md) | [日本語の説明](./README_JA.md) | [한국어 설명](./README_KOR.md) | [Français](./README_FR.md) | [Português](./README_PTBR.md) | [Türkçe](./README_TR.md) | [Русский](./README_RU.md) | [Español](./README_ES.md) | [Italiano](./README_IT.md) | [ไทย](./README_TH.md)
+## Core Features 
 
-## ✨ Features
+### NOVA's Daily Proclamations
+- **Strategic Market Analysis**:  Delivers market insights with cosmic foresight.
+- **Tactical Trading Advice**:  Offers actionable strategies inspired by celestial phenomena.
+- **Real-Time Memecoin Insights**: Provides updates infused with cutting-edge crypto knowledge.
 
--   🛠️ Full-featured Discord, Twitter and Telegram connectors
--   🔗 Support for every model (Llama, Grok, OpenAI, Anthropic, etc.)
--   👥 Multi-agent and room support
--   📚 Easily ingest and interact with your documents
--   💾 Retrievable memory and document store
--   🚀 Highly extensible - create your own actions and clients
--   ☁️ Supports many models (local Llama, OpenAI, Anthropic, Groq, etc.)
--   📦 Just works!
+### War Room Analytics
+- **Deep-Dive Market Trend Analysis**: Conducts thorough analyses of market trends.
+- **Solana Ecosystem Intelligence**: Focuses on Solana ecosystem developments.
+- **Liquidity Management Strategies**: Suggests strategies for effective liquidity management.
 
-## 🎯 Use Cases
+### Community Engagement
+- **Interactive Polls and Voting**: Engages the community through participatory content.
+- **Direct Engagement with the "Grande Armée"**: Builds a strong, interactive community.
+- **NOVA-Themed Meme Campaigns**: Uses humor and history to create viral campaigns.
 
--   🤖 Chatbots
--   🕵️ Autonomous Agents
--   📈 Business Process Handling
--   🎮 Video Game NPCs
--   🧠 Trading
+## Technical Implementation
 
-## 🚀 Quick Start
+### AI Engine
 
-### Prerequisites
-
--   [Python 2.7+](https://www.python.org/downloads/)
--   [Node.js 23+](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
--   [pnpm](https://pnpm.io/installation)
-
-> **Note for Windows Users:** [WSL 2](https://learn.microsoft.com/en-us/windows/wsl/install-manual) is required.
-
-### Use the Starter (Recommended)
-
-```bash
-git clone https://github.com/ai16z/eliza-starter.git
-
-cp .env.example .env
-
-pnpm i && pnpm start
-```
-
-Then read the [Documentation](https://ai16z.github.io/eliza/) to learn how to customize your Eliza.
-
-### Manually Start Eliza (Only recommended if you know what you are doing)
-
-```bash
-# Clone the repository
-git clone https://github.com/ai16z/eliza.git
-
-# Checkout the latest release
-# This project iterates fast, so we recommend checking out the latest release
-git checkout $(git describe --tags --abbrev=0)
-```
-
-### Start Eliza with Gitpod
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/ai16z/eliza/tree/main)
-
-### Edit the .env file
-
-Copy .env.example to .env and fill in the appropriate values.
+```python
+ 
+class NovaAI:
+    def __init__(self):
+        self.market_command = MarketCommand()
+        self.strategy_council = StrategyCouncil()
+        self.insight_generator = InsightGenerator()
 
 ```
-cp .env.example .env
-```
+# Data Sources
 
-Note: .env is optional. If your planning to run multiple distinct agents, you can pass secrets through the character JSON
+- **Real-Time Crypto Market APIs**: For up-to-the-minute market data.
+- **Social Sentiment Analysis**: Gauges market sentiment from social media.
+- **Community Feedback Loops**: Incorporates user feedback into strategy development.
 
-### Automatically Start Eliza
+# Deployment
 
-This will run everything to setup the project and start the bot with the default character.
+## Primary Platforms
 
-```bash
-sh scripts/start.sh
-```
+- **Twitter**: Main communication channel for announcements and updates.
+ 
 
-### Edit the character file
+# Community Structure
 
-1. Open `agent/src/character.ts` to modify the default character. Uncomment and edit.
+## Cryptic Legion (Community)
 
-2. To load custom characters:
-    - Use `pnpm start --characters="path/to/your/character.json"`
-    - Multiple character files can be loaded simultaneously
-3. Connect with X (Twitter)
-    - change `"clients": []` to `"clients": ["twitter"]` in the character file to connect with X
 
-### Manually Start Eliza
+- Active traders and investors
+- Content contributors
+- Strategy discussants
 
-```bash
-pnpm i
-pnpm build
-pnpm start
+## Divine Council (Core Team)
 
-# The project iterates fast, sometimes you need to clean the project if you are coming back to the project
-pnpm clean
-```
+- Strategic advisors
+- Campaign managers
+- Content creators
 
-#### Additional Requirements
+# Mission Statement
 
-You may need to install Sharp. If you see an error when starting up, try installing it with the following command:
+To explore and innovate within the cryptosphere with cosmic insight, entertainment, and community-driven analysis, guided by visionary wisdom and market acumen.
 
-```
-pnpm install --include=optional sharp
-```
 
-### Community & contact
 
--   [GitHub Issues](https://github.com/ai16z/eliza/issues). Best for: bugs you encounter using Eliza, and feature proposals.
--   [Discord](https://discord.gg/ai16z). Best for: sharing your applications and hanging out with the community.
 
-## Contributors
+# Contact
 
-<a href="https://github.com/ai16z/eliza/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ai16z/eliza" />
-</a>
+- **X**: [@SolNovaAI]( https://x.com/SolNovaAI)
 
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=ai16z/eliza&type=Date)](https://star-history.com/#ai16z/eliza&Date)
