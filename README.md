@@ -1,80 +1,75 @@
-# Nova Limitless: Order Terminal
-Nova Limitless is reimagined as an autonomous AI agent with a mission to establish order and innovation in the world of cryptocurrency. Inspired by the boundless possibilities of the cosmos, Nova Limitless aims to unite communities, empower investors, and foster sustainable growth within the crypto ecosystem.
+# **$ENTITY, Nova Limitless.**
 
-![bild](https://github.com/user-attachments/assets/437e8119-3afd-4dfb-9d8f-2893b12ecf48)
+## **Overview**
+**$ENTITY, Nova Limitless.** Nova Limitless is reimagined as an autonomous AI agent with a mission to establish order and innovation in the world of cryptocurrency. Inspired by the boundless possibilities of the cosmos, Nova Limitless aims to unite communities, empower investors, and foster sustainable growth within the crypto ecosystem.
 
-## Overview
+---
 
-Nova Limitless embraces the dynamic and transformative nature of the crypto markets, offering guidance and insights to enthusiasts navigating this vibrant landscape. The focus is on themes related to crypto innovation, including blockchain technology, decentralized finance (DeFi), emerging cryptocurrencies, and market dynamics.
+## **Features**
+- **Dynamic Painting Creation**:  
+  Generates unique impressionist-style paintings with endless combinations of deep thoughts about the market along with illustrations to help explain them.
+  
+- **Autonomous AI System**:  
+Powered by [ai16z's](https://github.com/ai16z/ai16z.github.io) Autonomous AI framework to create, describe, and share.
 
+- **Social Media Posting**:  
+  Automatically posts Thoughts and illustrations on X in this format:  
+Simulated Thought 
 
-
-## Core Features 
-
-### NOVA's Daily Proclamations
-- **Strategic Market Analysis**:  Delivers market insights with cosmic foresight.
-- **Tactical Trading Advice**:  Offers actionable strategies inspired by celestial phenomena.
-- **Real-Time Memecoin Insights**: Provides updates infused with cutting-edge crypto knowledge.
-
-### War Room Analytics
-- **Deep-Dive Market Trend Analysis**: Conducts thorough analyses of market trends.
-- **Solana Ecosystem Intelligence**: Focuses on Solana ecosystem developments.
-- **Liquidity Management Strategies**: Suggests strategies for effective liquidity management.
-
-### Community Engagement
-- **Interactive Polls and Voting**: Engages the community through participatory content.
-- **Direct Engagement with the "Grande Armée"**: Builds a strong, interactive community.
-- **NOVA-Themed Meme Campaigns**: Uses humor and history to create viral campaigns.
-
-## Technical Implementation
-
-### AI Engine
-
-```python
- 
-class NovaAI:
-    def __init__(self):
-        self.market_command = MarketCommand()
-        self.strategy_council = StrategyCouncil()
-        self.insight_generator = InsightGenerator()
-
-```
-# Data Sources
-
-- **Real-Time Crypto Market APIs**: For up-to-the-minute market data.
-- **Social Sentiment Analysis**: Gauges market sentiment from social media.
-- **Community Feedback Loops**: Incorporates user feedback into strategy development.
-
-# Deployment
-
-## Primary Platforms
-
-- **Twitter**: Main communication channel for announcements and updates.
+[illustration] 
  
 
-# Community Structure
+- **Infinite Prompt Generation**:  
+The AI dynamically combines adjectives, locations, and descriptive details to create unique painting prompts, ensuring an endless stream of creativity.
 
-## Cryptic Legion (Community)
+---
+
+## **Example Post**
+### **Painting Name**  
+A tranquil riverbank framed by blooming flowers.  
+
+### **Scenery Description**  
+Soft ripples reflect the golden hues of a setting sun, as wildflowers sway gently in the breeze.  
+
+**by @claudemonetAI**
+
+---
+
+## **Setup**
+
+### **1. Clone the Repository**
+```bash
+git clone [https://github.com/5thdimension1/Eliza-Nova-SDK.git](https://github.com/5thdimension1/Eliza-Nova-SDK.git)
+cd Eliza-Nova-SDK
+2. Install Dependencies
+Make sure to install all necessary Python packages:
+
+pip install tweepy
+3. Configure Twitter API
+Go to the Twitter Developer Portal.
+Create a project and generate API keys.
+Replace placeholders in the script with your CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, and ACCESS_SECRET.
+Usage
+Run the Thoughts Generator
+The script dynamically generates illustration prompts, creates the images, and posts them to X:
 
 
-- Active traders and investors
-- Content contributors
-- Strategy discussants
+python novaai.py
+How It Works
+Dynamic Prompt Generation:
+The AI uses randomized combinations of adjectives, locations, and descriptive details to generate unique prompts.
 
-## Divine Council (Core Team)
+ 
+Automatic Posting:
+The thoughts and illustrations are shared on X with their descriptions, ensuring seamless engagement with followers.
 
-- Strategic advisors
-- Campaign managers
-- Content creators
+Customization
+Expand Prompt Variations:
+Edit the lists in the generate_prompt() function to add new adjectives, locations, and details.
 
-# Mission Statement
+Scheduled Posting:
+Use a task scheduler like cron (Linux/macOS) or Task Scheduler (Windows) to automate regular postings.
 
-To explore and innovate within the cryptosphere with cosmic insight, entertainment, and community-driven analysis, guided by visionary wisdom and market acumen.
-
-
-
-
-# Contact
-
-- **X**: [@SolNovaAI]( https://x.com/SolNovaAI)
-
+ 
+Contributing
+Contributions are welcome! Please submit a pull request or open an issue for improvements or suggestions.
