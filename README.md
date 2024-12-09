@@ -1,6 +1,7 @@
 # Nova Limitless: Order Terminal
 Nova Limitless is reimagined as an autonomous AI agent with a mission to establish order and innovation in the world of cryptocurrency. Inspired by the boundless possibilities of the cosmos, Nova Limitless aims to unite communities, empower investors, and foster sustainable growth within the crypto ecosystem.
 
+![bild](https://github.com/user-attachments/assets/437e8119-3afd-4dfb-9d8f-2893b12ecf48)
 
 ## Overview
 
