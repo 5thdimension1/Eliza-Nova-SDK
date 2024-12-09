@@ -33,37 +33,121 @@ The AI dynamically combines adjectives, locations, and descriptive details to cr
 
 ### **1. Clone the Repository**
 ```bash
-git clone [https://github.com/5thdimension1/Eliza-Nova-SDK.git](https://github.com/5thdimension1/Eliza-Nova-SDK.git)
+git clone https://github.com/5thdimension1/Eliza-Nova-SDK.git
 cd Eliza-Nova-SDK
+
 2. Install Dependencies
-Make sure to install all necessary Python packages:
+npm init -y
+npm install typescript @types/node --save-dev
+npm install twit
+npm install dotenv
 
-pip install tweepy
 3. Configure Twitter API
-Go to the Twitter Developer Portal.
-Create a project and generate API keys.
-Replace placeholders in the script with your CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, and ACCESS_SECRET.
-Usage
-Run the Thoughts Generator
-The script dynamically generates illustration prompts, creates the images, and posts them to X:
+CONSUMER_KEY=your_consumer_key
+CONSUMER_SECRET=your_consumer_secret
+ACCESS_TOKEN=your_access_token
+ACCESS_SECRET=your_access_secret
+
+Create a novaai.ts file with the following content:
+
+import * as fs from 'fs';
+import * as path from 'path';
+import * as Twit from 'twit';
+import { config } from 'dotenv';
+
+// Load environment variables
+config();
+
+// Initialize Twitter API client
+const T = new Twit({
+  consumer_key: process.env.CONSUMER_KEY!,
+  consumer_secret: process.env.CONSUMER_SECRET!,
+  access_token: process.env.ACCESS_TOKEN!,
+  access_token_secret: process.env.ACCESS_SECRET!,
+});
+
+// AI Agent setup (mock or hypothetical implementation)
+class AutonomousAI {
+  constructor(public name: string, public description: string) {}
+
+  async generateImage({ prompt, style }: { prompt: string; style: string }) {
+    // Simulated image generation logic
+    return Promise.resolve({ image_path: './generated_image.png' });
+  }
+}
+
+const concept = {
+  name: "Nova Limitless AI",
+  description: "An autonomous AI inspired by Nova Limitless, exploring cosmic themes and celestial wonders."
+};
+const aiAgent = new AutonomousAI(concept.name, concept.description);
+
+// Components for dynamic prompt generation
+const adjectives = ["celestial", "cosmic", "ethereal", "luminous", "stellar"];
+const locations = ["nebula", "galaxy", "starfield", "supernova", "black hole"];
+const details = [
+  "illuminated by distant stars",
+  "enveloped in cosmic dust",
+  "sparkling with stardust",
+  "radiating with astral light",
+  "swirling in the vast cosmos"
+];
+
+// Function to generate dynamic prompts
+function generatePrompt(): string {
+  const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+  const location = locations[Math.floor(Math.random() * locations.length)];
+  const detail = details[Math.floor(Math.random() * details.length)];
+  return `A ${adjective} ${location} ${detail}.`;
+}
+
+// Generate a Nova Limitless-like image and post
+async function generateAndPost(): Promise<void> {
+  const prompt = generatePrompt();
+
+  try {
+    const result = await aiAgent.generateImage({ prompt, style: " cosmic celestial being 8k " });
+    const imagePath: string | undefined = result.image_path;
+
+    if (imagePath) {
+      const b64content = fs.readFileSync(imagePath, { encoding: 'base64' });
+
+      T.post('media/upload', { media_data: b64content }, (err, data) => {
+        if (err) {
+          console.error("Media upload failed:", err);
+          return;
+        }
+
+        const mediaIdStr = data.media_id_string;
+        const params = { status: `${prompt}\n\nby @SolNovaAI`, media_ids: [mediaIdStr] };
+
+        T.post('statuses/update', params, (err) => {
+          if (!err) {
+            console.log("Successfully posted on X!");
+            fs.unlinkSync(imagePath);
+          } else {
+            console.error("Error posting status:", err);
+          }
+        });
+      });
+    } else {
+      console.log("Image generation failed: No image path returned.");
+    }
+  } catch (e) {
+    console.error(`Error generating and posting: ${e}`);
+  }
+}
+
+generateAndPost();
 
 
-python novaai.py
-How It Works
-Dynamic Prompt Generation:
-The AI uses randomized combinations of adjectives, locations, and descriptive details to generate unique prompts.
+Run the TypeScript Script : 
+npx tsc novaai.ts
+node novaai.js
 
- 
-Automatic Posting:
-The thoughts and illustrations are shared on X with their descriptions, ensuring seamless engagement with followers.
+Customization & Automation
+Expand Prompt Variations: Modify the adjectives, locations, and details arrays to create more diverse prompts.
+Scheduled Posting: Use cron jobs on Linux/macOS or Task Scheduler on Windows to automate running the script at regular intervals.
 
-Customization
-Expand Prompt Variations:
-Edit the lists in the generate_prompt() function to add new adjectives, locations, and details.
-
-Scheduled Posting:
-Use a task scheduler like cron (Linux/macOS) or Task Scheduler (Windows) to automate regular postings.
-
- 
 Contributing
 Contributions are welcome! Please submit a pull request or open an issue for improvements or suggestions.
