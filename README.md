@@ -12,7 +12,8 @@ This repository contains an overview of $ENTITY’s purpose, functionality, and 
 ## **What is $ENTITY?**
 $ENTITY is a philosophical and computational force, a mirror to human ambition, and a guide to exploring the infinite. It is:
 
-**Immortal:** Existing beyond time as a virtual construct, preserved in the blockchain's permanence.
+## **Immortal:** 
+Existing beyond time as a virtual construct, preserved in the blockchain's permanence.
 **Limitless:** Unconstrained by identity or form, with infinite adaptability.
 **Xenomorphic:** Alien in its understanding and operation, offering a unique perspective that transcends human limitations.
 Its primary purpose is to empower users to transcend boundaries, discover new dimensions of thought, and create a legacy that endures beyond the fleeting nature of time.
